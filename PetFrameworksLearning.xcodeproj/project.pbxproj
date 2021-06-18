@@ -3,23 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146DFA851220B67365C3FA79 /* Pods_PetFrameworksLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7441358153F2DD09B86FB178 /* Pods_PetFrameworksLearning.framework */; };
 		DE5622E1267D005800E7238A /* PetFrameworksLearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5622E0267D005800E7238A /* PetFrameworksLearningApp.swift */; };
 		DE5622E3267D005800E7238A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5622E2267D005800E7238A /* ContentView.swift */; };
 		DE5622E5267D005A00E7238A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE5622E4267D005A00E7238A /* Assets.xcassets */; };
 		DE5622E8267D005A00E7238A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE5622E7267D005A00E7238A /* Preview Assets.xcassets */; };
+		DE5622F0267D023D00E7238A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5622EF267D023D00E7238A /* Model.swift */; };
+		DE5622F2267D024200E7238A /* PeopleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5622F1267D024200E7238A /* PeopleViews.swift */; };
+		DE5622F4267D025100E7238A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5622F3267D025100E7238A /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00F20AC689E0012071E1AB09 /* Pods-PetFrameworksLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFrameworksLearning.debug.xcconfig"; path = "Target Support Files/Pods-PetFrameworksLearning/Pods-PetFrameworksLearning.debug.xcconfig"; sourceTree = "<group>"; };
+		7441358153F2DD09B86FB178 /* Pods_PetFrameworksLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFrameworksLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25F22097527DCD05E3DF306 /* Pods-PetFrameworksLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFrameworksLearning.release.xcconfig"; path = "Target Support Files/Pods-PetFrameworksLearning/Pods-PetFrameworksLearning.release.xcconfig"; sourceTree = "<group>"; };
 		DE5622DD267D005800E7238A /* PetFrameworksLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetFrameworksLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5622E0267D005800E7238A /* PetFrameworksLearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFrameworksLearningApp.swift; sourceTree = "<group>"; };
 		DE5622E2267D005800E7238A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DE5622E4267D005A00E7238A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE5622E7267D005A00E7238A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE5622E9267D005A00E7238A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE5622EF267D023D00E7238A /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DE5622F1267D024200E7238A /* PeopleViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViews.swift; sourceTree = "<group>"; };
+		DE5622F3267D025100E7238A /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146DFA851220B67365C3FA79 /* Pods_PetFrameworksLearning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28E5E6BFDC266D95F818363C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00F20AC689E0012071E1AB09 /* Pods-PetFrameworksLearning.debug.xcconfig */,
+				D25F22097527DCD05E3DF306 /* Pods-PetFrameworksLearning.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		67DF450D6CDA0FB4AA16E6BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7441358153F2DD09B86FB178 /* Pods_PetFrameworksLearning.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DE5622D4267D005700E7238A = {
 			isa = PBXGroup;
 			children = (
 				DE5622DF267D005800E7238A /* PetFrameworksLearning */,
 				DE5622DE267D005800E7238A /* Products */,
+				28E5E6BFDC266D95F818363C /* Pods */,
+				67DF450D6CDA0FB4AA16E6BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,9 +83,12 @@
 			isa = PBXGroup;
 			children = (
 				DE5622E0267D005800E7238A /* PetFrameworksLearningApp.swift */,
-				DE5622E2267D005800E7238A /* ContentView.swift */,
 				DE5622E4267D005A00E7238A /* Assets.xcassets */,
 				DE5622E9267D005A00E7238A /* Info.plist */,
+				DE5622E2267D005800E7238A /* ContentView.swift */,
+				DE5622F1267D024200E7238A /* PeopleViews.swift */,
+				DE5622F3267D025100E7238A /* ViewModel.swift */,
+				DE5622EF267D023D00E7238A /* Model.swift */,
 				DE5622E6267D005A00E7238A /* Preview Content */,
 			);
 			path = PetFrameworksLearning;
@@ -76,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE5622EC267D005A00E7238A /* Build configuration list for PBXNativeTarget "PetFrameworksLearning" */;
 			buildPhases = (
+				3722443226D9A10B02444CFC /* [CP] Check Pods Manifest.lock */,
 				DE5622D9267D005800E7238A /* Sources */,
 				DE5622DA267D005800E7238A /* Frameworks */,
 				DE5622DB267D005800E7238A /* Resources */,
+				45E2D84F839BE8F7AF9C5994 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +168,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3722443226D9A10B02444CFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PetFrameworksLearning-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45E2D84F839BE8F7AF9C5994 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetFrameworksLearning/Pods-PetFrameworksLearning-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetFrameworksLearning/Pods-PetFrameworksLearning-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetFrameworksLearning/Pods-PetFrameworksLearning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DE5622D9267D005800E7238A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5622F4267D025100E7238A /* ViewModel.swift in Sources */,
+				DE5622F0267D023D00E7238A /* Model.swift in Sources */,
 				DE5622E3267D005800E7238A /* ContentView.swift in Sources */,
 				DE5622E1267D005800E7238A /* PetFrameworksLearningApp.swift in Sources */,
+				DE5622F2267D024200E7238A /* PeopleViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +344,7 @@
 		};
 		DE5622ED267D005A00E7238A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00F20AC689E0012071E1AB09 /* Pods-PetFrameworksLearning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -286,6 +367,7 @@
 		};
 		DE5622EE267D005A00E7238A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D25F22097527DCD05E3DF306 /* Pods-PetFrameworksLearning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
