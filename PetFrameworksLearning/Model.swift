@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 extension Collection where Element: Identifiable {
     func firstIndex(matching element: Element) -> Self.Index? {
@@ -13,13 +14,9 @@ extension Collection where Element: Identifiable {
     }
 }
 
-struct Model {
-    var peoples = [people]()
-    
-    struct people: Identifiable {
-        var name: String
-        var age: Int
-        var isMale: Bool
-        var id = UUID()
-    }
+class People: Object, Identifiable {
+    @objc dynamic var name: String = ""
+    @objc dynamic var age: Int = 0
+    @objc dynamic var isMale: Bool = false
+    @objc dynamic var id = UUID()
 }

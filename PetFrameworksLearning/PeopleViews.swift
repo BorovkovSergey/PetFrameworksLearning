@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PeopleView: View {
-    var viewModel: ViewModel
     @Binding var name: String
     @Binding var age: Int
     @Binding var isMale: Bool
@@ -27,14 +26,14 @@ struct PeopleView: View {
 }
 
 struct PeopleAdd: View {
-    var viewModel: ViewModel
+    @EnvironmentObject var viewModel: ViewModel
     @State var name: String = ""
     @State var age: Int = 0
     @State var isMale: Bool = false
     
     @Binding var isShowing: Bool
     var body: some View {
-        PeopleView(viewModel: viewModel, name: $name, age: $age, isMale: $isMale)
+        PeopleView(name: $name, age: $age, isMale: $isMale)
         Button("Save"){
             self.isShowing = false
             viewModel.addPeople(name: name, age: age, isMale: isMale)
@@ -44,14 +43,14 @@ struct PeopleAdd: View {
 
 struct PeopleEdit: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    var viewModel: ViewModel
+    @EnvironmentObject var viewModel: ViewModel
     var id: Int
     @State var name: String
     @State var age: Int
     @State var isMale: Bool
     
     var body: some View {
-        PeopleView(viewModel: viewModel, name: $name, age: $age, isMale: $isMale)
+        PeopleView(name: $name, age: $age, isMale: $isMale)
         Button("Done"){
             self.presentationMode.wrappedValue.dismiss()
             viewModel.editPopleInfo(by: id, with: name, age, and: isMale)

@@ -13,21 +13,21 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             List{
-                ForEach(viewModel.model.peoples) { people in
-                    if let id = viewModel.model.peoples.firstIndex(matching: people) {
-                        NavigationLink(destination: PeopleEdit(viewModel: viewModel,
-                                                               id: id,
-                                                               name: viewModel.model.peoples[id].name,
-                                                               age: viewModel.model.peoples[id].age,
-                                                               isMale: viewModel.model.peoples[id].isMale
+                ForEach(viewModel.peoples) { people in
+                    if let id = viewModel.peoples.firstIndex(matching: people) {
+                        NavigationLink(destination: PeopleEdit(id: id,
+                                                               name: viewModel.peoples[id].name,
+                                                               age: viewModel.peoples[id].age,
+                                                               isMale: viewModel.peoples[id].isMale
                                                             )
+                                                            .environmentObject(viewModel)
                                                             .navigationBarTitle("Info:")){
                                                                 Text(people.name)
                                                             }
                     }
                 }
                 .onDelete{ indexSet in
-                    self.viewModel.model.peoples.remove(at: indexSet.first!)
+                    self.viewModel.deletePeople(people: self.viewModel.peoples[indexSet.first!])
                 }
             }
             .navigationBarItems(leading: Button(action: { ShowPeopleView = true }, label: {
@@ -37,7 +37,8 @@ struct ContentView: View {
             
         }
         .sheet(isPresented: $ShowPeopleView, content: {
-            PeopleAdd(viewModel: viewModel, isShowing: $ShowPeopleView)
+            PeopleAdd(isShowing: $ShowPeopleView)
+                .environmentObject(viewModel)
         })
     }
 }
